@@ -1,25 +1,22 @@
 var Letter = require('./letter.js');
-class Word {
-    constructor (answer) {
-        this.objArray = [];
-        this.answer = answer;
+function Word(answer) {
+    this.objArray = [];
+    this.answer = answer;
+    
+    
+    for(i of this.answer) {
+        var letter = new Letter(i);
+        this.objArray.push(letter);
     }
-    runThis () {
-        for (i of this.answer) {
-            var letter = new Letter(i);
-            this.objArray.push(letter);
-        }
-    }
-    runThis()
-
-    log () {
+    
+    var log = function () {
         var result = "";
         for (i of this.objArray) {
             result += i + " ";
         }
         console.log(answer + '\n***********************\n');
     }
-    userGuess (input) {
+    var userGuess = function(input) {
         for (i of this.objArray) {
             i.guess(input);
         }

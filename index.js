@@ -4,7 +4,7 @@ var inquirer = require('inquirer');
 var letterArray = 'abcdefghijklmnopqrstuvwxyz';
 var unitedStates = ['georgia', 'florida', 'texas'];
 
-var randomInex = Math.floor(Math.random()*unitedStates.length)
+var randomIndex = Math.floor(Math.random()*unitedStates.length)
 var randomWord = unitedStates[randomIndex];
 
 var computerWord = new Word(randomWord);
@@ -16,7 +16,7 @@ var guessesLeft = 10;
 
 function gameLogic () {
     if (requiredNewWord) {
-        var randomInex = Math.floor(Math.random()*unitedStates.length)
+        var randomIndex = Math.floor(Math.random()*unitedStates.length)
         var randomWord = unitedStates[randomIndex];
         var computerWord = new Word(randomWord);
         var requiredNewWord = false;
